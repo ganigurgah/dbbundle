@@ -12,6 +12,15 @@
 * **Modern Teknoloji:** Spring Boot 3+ ve Jakarta Persistence (JPA) projeleriyle tam uyumludur.
 
 ## 🛠 Kurulum
+Bu kodları indireceğiniz bir dizin oluşturduktan sonra, ilgili dizini terminal de açıp,
+aşağıdaki komutları sırasıyla çalıştırarak uygulamayı projenizde kullanılabilir hale getirebilirsiniz
+
+
+```Bash
+git clone https://github.com/ganigurgah/dbbundle.git
+mvn clean install
+mvn install:install-file -Dfile=target\dbbundle-1.0.1.jar -DgroupId=com.valora.library -DartifactId=dbbundle -Dversion=1.0.1 -Dpackaging=jar -DgeneratePom=true
+```
 
 Projenize dahil etmek için `pom.xml` dosyanıza aşağıdaki bağımlılığı ekleyebilirsiniz:
 
