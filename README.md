@@ -1,5 +1,8 @@
 # Valora DBBundle Control 🚀
 
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
+![License](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge)
+
 **DBBundle**, Java ekosisteminde yer alan uygulamalar için geliştirilmiş, geleneksel `.properties` dosyalarının statikliğinden kurtulmanızı sağlayan, veritabanı tabanlı bir dil (i18n) yönetim kütüphanesidir.
 
 
