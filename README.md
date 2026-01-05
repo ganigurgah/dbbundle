@@ -59,13 +59,11 @@ System.out.println(message); // Çıktı: Merhaba!
 Kütüphane, Mockito ve JUnit 5 kullanılarak kapsamlı test süreçlerinden geçirilmiştir. Mevcut testleri çalıştırmak için:
 
 
-```
-Bash
-
+```Bash
 mvn test
 ```
 ## 👤 Yazar
-Gani GÜRGAH - [GitHub Profile](github.com/ganigurgah)
+Gani GÜRGAH - [GitHub Profile](https://www.github.com/ganigurgah)
 
 ## 📄 Lisans
 Bu proje MIT Lisansı ile lisanslanmıştır. Detaylar için **_LICENSE_** dosyasına bakabilirsiniz.
