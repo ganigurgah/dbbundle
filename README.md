@@ -22,7 +22,7 @@ Projenize dahil etmek için `pom.xml` dosyanıza aşağıdaki bağımlılığı 
     <version>1.0.1</version>
 </dependency>
 ```
-🚀 Hızlı Kullanım
+## 🚀 Hızlı Kullanım
 1. Kendi Sağlayıcınızı Tanımlayın
    Kütüphanenin veriye nasıl ulaşacağını belirtmek için TranslationProvider arayüzünü uygulayın:
 
