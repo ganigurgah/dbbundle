@@ -18,8 +18,10 @@ aşağıdaki komutları sırasıyla çalıştırarak uygulamayı projenizde kull
 
 ```Bash
 git clone https://github.com/ganigurgah/dbbundle.git
+cd dbbundle
 mvn clean install
 mvn install:install-file -Dfile=target\dbbundle-1.0.1.jar -DgroupId=com.valora.library -DartifactId=dbbundle -Dversion=1.0.1 -Dpackaging=jar -DgeneratePom=true
+
 ```
 
 Projenize dahil etmek için `pom.xml` dosyanıza aşağıdaki bağımlılığı ekleyebilirsiniz:
