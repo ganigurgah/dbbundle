@@ -76,6 +76,8 @@ Kütüphane, Mockito ve JUnit 5 kullanılarak kapsamlı test süreçlerinden ge�
 ```Bash
 mvn test
 ```
+Ayrıca [dbbundle.sample](https://github.com/ganigurgah/dbbundle.sample) reposunda, nasıl kullanıldığıyla ilgili bir örnek bulabilirsiniz
+
 ## 👤 Yazar
 Gani GÜRGAH - [GitHub Profile](https://www.github.com/ganigurgah)
 
