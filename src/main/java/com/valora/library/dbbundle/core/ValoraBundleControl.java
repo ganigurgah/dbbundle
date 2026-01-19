@@ -23,6 +23,7 @@ public class ValoraBundleControl extends ResourceBundle.Control {
 
     @Override
     public ResourceBundle newBundle(String baseName, Locale locale, String format, ClassLoader loader, boolean reload) {
+        /*
         if (locale == null || locale.getLanguage().trim().isEmpty())
             return null;
         Locale tmpLocale = Locale.of(locale.getLanguage());
@@ -40,13 +41,29 @@ public class ValoraBundleControl extends ResourceBundle.Control {
         });
         bundleCache.put(tmpLocale, cachedBundle);
         return cachedBundle;
+        */
+        if (locale == null || locale.getLanguage().isBlank()) {
+            return null;
+        }
+
+        // Cache'den al veya oluştur
+        return bundleCache.get(locale, loc -> {
+            Map<String, Object> data = provider.loadTranslations(loc);
+
+            // Eğer veri yoksa boş bir map ile oluştur ki tekrar tekrar DB'ye gitmesin
+            if (data == null || data.isEmpty()) {
+                data = new HashMap<>();
+            }
+
+            return new ValoraMapResourceBundle(data);
+        });
     }
 
     public void reload() {
         ValoraCacheManager.clearLibCache();
         bundleCache.invalidateAll();
         LocaleContext.clear();
-        newBundle("",LocaleContext.getLocale(),"",null,true);
+        //newBundle("", LocaleContext.getLocale(), "", null, true);
     }
 
     public void addNewKey(String key, String value, String locale) {
@@ -55,14 +72,16 @@ public class ValoraBundleControl extends ResourceBundle.Control {
     }
 
     private static class ValoraMapResourceBundle extends ResourceBundle {
-        private final Map<String,Object> data;
+        private final Map<String, Object> data;
 
-        public ValoraMapResourceBundle(Map<String,Object> data) {
+        public ValoraMapResourceBundle(Map<String, Object> data) {
             this.data = data;
+            setParent(null);
         }
 
         @Override
         protected Object handleGetObject(String key) {
+            if (data == null) return null;
             return data.get(key);
         }
 
