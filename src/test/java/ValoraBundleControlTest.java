@@ -33,7 +33,9 @@ class ValoraBundleControlTest {
         Map<String, Object> mockData = new HashMap<>();
         mockData.put("welcome", "Hoş Geldiniz!");
         doReturn(mockData).when(mockProvider).loadTranslations(any());
-        ResourceBundle bundle = control.newBundle("dbMessages", Locale.forLanguageTag("tr"), "java.class", null, false);
+        ResourceBundle bundle = control
+                .newBundle("dbMessages", Locale.forLanguageTag("tr"),
+                        "java.class", null, false);
         assertEquals("Hoş Geldiniz!", bundle.getString("welcome"));
         verify(mockProvider, times(1)).loadTranslations(any());
     }

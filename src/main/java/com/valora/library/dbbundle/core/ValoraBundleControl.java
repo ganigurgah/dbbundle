@@ -23,25 +23,6 @@ public class ValoraBundleControl extends ResourceBundle.Control {
 
     @Override
     public ResourceBundle newBundle(String baseName, Locale locale, String format, ClassLoader loader, boolean reload) {
-        /*
-        if (locale == null || locale.getLanguage().trim().isEmpty())
-            return null;
-        Locale tmpLocale = Locale.of(locale.getLanguage());
-        ResourceBundle cachedBundle = bundleCache.asMap().get(tmpLocale);
-        if (cachedBundle != null) {
-            return cachedBundle;
-        }
-        cachedBundle = bundleCache.get(tmpLocale, loc -> {
-            Map<String, Object> data = provider.loadTranslations(loc);
-
-            if (data == null || data.isEmpty()) {
-                return new ValoraMapResourceBundle(new HashMap<>());
-            }
-            return new ValoraMapResourceBundle(data);
-        });
-        bundleCache.put(tmpLocale, cachedBundle);
-        return cachedBundle;
-        */
         if (locale == null || locale.getLanguage().isBlank()) {
             return null;
         }
