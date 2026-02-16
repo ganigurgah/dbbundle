@@ -346,6 +346,7 @@ Bu proje MIT lisansı altında lisanslanmıştır.
 📚[Installation](INSTALLATIOIN.md)<br>
 📚[Examples](EXAMPLES.md)<br>
 📚[JSF Integration](JSF-INTEGRATIOIN.md)<br>
+📚[Troubleshooting](TROUBLESHOOTING.md)<br>
 
 
 ## İletişim
