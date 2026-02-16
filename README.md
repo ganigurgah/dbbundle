@@ -341,9 +341,12 @@ Build edilen JAR dosyası `target/dbbundle-1.0.0.jar` konumunda oluşturulacakt�
 
 Bu proje MIT lisansı altında lisanslanmıştır.
 
-## Katkıda Bulunma
+## 🏫 Diğer Kaynaklar
+📚[ChangeLog](CHANGELOG.md)<br>
+📚[Installation](INSTALLATIOIN.md)<br>
+📚[Examples](EXAMPLES.md)<br>
+📚[JSF Integration](JSF-INTEGRATIOIN.md)<br>
 
-Katkılarınızı bekliyoruz! Lütfen pull request gönderin veya issue açın.
 
 ## İletişim
 
