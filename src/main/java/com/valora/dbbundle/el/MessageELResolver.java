@@ -39,7 +39,7 @@ public class MessageELResolver extends ELResolver {
                 return dbBundleService.getMessage(key);
             } else {
                 logger.warn("DbBundleService not initialized in MessageELResolver");
-                return "???<tst>" + key + "<tst>???";
+                return "???" + key + "???";
             }
         }
         

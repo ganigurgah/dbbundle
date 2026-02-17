@@ -149,7 +149,8 @@ public class DbBundleService {
             return bundle.getString(key);
         } catch (MissingResourceException e) {
             logger.warn("Message key not found: {} for locale: {}", key, locale);
-            return "???" + key + "???";
+            //return "???" + key + "???";
+            return key;
         }
     }
     
